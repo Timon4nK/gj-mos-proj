@@ -1,14 +1,12 @@
 using Godot;
 using System;
 
-
-public enum MDirection
+public enum Direction
 {
 	North,
 	West,
 	South,
-	East,
-	
+	East
 }
 
 public partial class Player : Node2D
@@ -20,37 +18,38 @@ public partial class Player : Node2D
 	public const int MOVE_DISTANCE = 100;	
 	
 	public override void _Ready()
-		{
+	{
 		ButtonNorth  = GetNode<Button>("ButtonNorth");
 		ButtonEast   = GetNode<Button>("ButtonEast");
 		ButtonSouth  = GetNode<Button>("ButtonSouth");
 		ButtonWest	 = GetNode<Button>("ButtonWest");
-		}
+	}
 		
-	void directionalButtonHandler(MDirection mdirection)
+	void directionalButtonHandler(Direction direction)
 	{
-		switch (mdirection)
+		switch (direction)
 		{
-			case MDirection.North:	
-				Position = Position + Vector2.Up*MOVE_DISTANCE;
-				ButtonNorth.Text="meow";
+			case Direction.North:
+				Position =
+				new Vector2(Position.X, Position.Y - MOVE_DISTANCE);
 				break;
-			case MDirection.West:
+			case Direction.West:
 				Position =
 				new Vector2(Position.X - MOVE_DISTANCE, Position.Y);
 				break;
-			case MDirection.South:
+			case Direction.South:
 				Position =
 				new Vector2(Position.X, Position.Y + MOVE_DISTANCE);
 				break;
-			case MDirection.East:
+			case Direction.East:
 				Position =
 				new Vector2(Position.X + MOVE_DISTANCE, Position.Y);
-				break;}}
+				break;
+		}
+	}
 
-	void _on_button_north_pressed() { directionalButtonHandler(MDirection.North); }
-	void _on_button_east_pressed() { directionalButtonHandler(MDirection.East); }
-	void _on_button_south_pressed() { directionalButtonHandler(MDirection.South); }
-	void _on_button_west_pressed() { directionalButtonHandler(MDirection.West); }
-	
+	void _on_button_north_pressed() { directionalButtonHandler(Direction.North); }
+	void _on_button_east_pressed() { directionalButtonHandler(Direction.East); }
+	void _on_button_south_pressed() { directionalButtonHandler(Direction.South); }
+	void _on_button_west_pressed() { directionalButtonHandler(Direction.West); }
 }

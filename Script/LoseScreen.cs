@@ -3,16 +3,15 @@ using System;
 
 public partial class LoseScreen : Node2D
 {
-	public Button ButtonMenu;	
+	public Button ButtonMenu;
 	public Button ButtonPlay;
-	public AudioStreamPlayer FailSound; 	
+	public AudioStreamPlayer FailSound;
 
 	public override void _Ready()
 	{
 		FailSound = GetNode<AudioStreamPlayer>("FailSound");
-		FailSound.Play(0);
-	}	
-
+		FailSound.Play();
+	}
 	
 	void _on_button_menu_pressed()
 	{
@@ -21,5 +20,5 @@ public partial class LoseScreen : Node2D
 	void _on_button_play_pressed()
 	{
 		GetTree().ChangeSceneToFile("res://Maps/MainScreen.tscn"); 
-	}	
+	}
 }

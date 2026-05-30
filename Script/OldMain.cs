@@ -11,7 +11,7 @@ public enum SelectMode
 	Trap
 }
 
-public enum Direction
+/*public enum Direction
 {
 	North,
 	NorthWest,
@@ -21,9 +21,9 @@ public enum Direction
 	SouthEast,
 	East,
 	NorthEast
-}
+}*/
 
-public partial class Main : Node2D
+public partial class OldMain : Node2D
 {
 	public const int BOARD_SIZE = 800;
 	public const int MOVE_DISTANCE = BOARD_SIZE / 8;
