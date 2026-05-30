@@ -3,8 +3,8 @@ using System;
 
 public partial class SoundPanel : Node2D
 {
-    public AudioStreamPlayer AmbientMusic;
-    private Button ButtonMusicOff;
+	public AudioStreamPlayer AmbientMusic;
+	private Button ButtonMusicOff;
 	private Button ButtonSoundsOff;
 	public bool isMusicPlaying = true;
 	public bool isSoundsPlaying = true;
@@ -13,9 +13,9 @@ public partial class SoundPanel : Node2D
 	{
 		ButtonMusicOff = GetNode<Button>("ButtonMusicOff");
 		ButtonSoundsOff = GetNode<Button>("ButtonSoundsOff");
-        AmbientMusic = GetNode<AudioStreamPlayer>("")
+		//AmbientMusic = GetNode<AudioStreamPlayer>("");
 
-    }
+	}
 
 	void _on_button_music_off_pressed()
 	{

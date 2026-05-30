@@ -10,7 +10,7 @@ public partial class MainMenu : Node2D
 	{
 		Svidanie1 = GetNode<AudioStreamPlayer>("Svidanie1");
 		ButtonSound = GetNode<AudioStreamPlayer>("ButtonSound");
-		Svidanie1.Play();
+		//Svidanie1.Play();
 	}
 	
 	void _on_button_play_pressed()

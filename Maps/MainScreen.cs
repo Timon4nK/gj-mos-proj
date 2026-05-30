@@ -12,9 +12,8 @@ public partial class MainScreen : Node2D
 	
 	public override void _Ready()
 	{
-
 		Svidanie3 = GetNode<AudioStreamPlayer>("Svidanie3");
-		Svidanie3.Play(0);
+		//Svidanie3.Play(0);
 	}
 	
 	void _on_button_win_pressed()
@@ -25,5 +24,13 @@ public partial class MainScreen : Node2D
 	{
 		GetTree().ChangeSceneToFile("res://Maps/LoseScreen.tscn");
 	}
-	
+	void _on_button_debug_1_pressed()
+	{
+		GD.Print(GameField.Instance.ThemeColor);
+	}
+	void _on_button_debug_2_pressed()
+	{
+		GameField.Instance.ThemeColor = "Светлая";
+
+	}
 }

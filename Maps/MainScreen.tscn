@@ -11,6 +11,9 @@
 [node name="Node2D" type="Node2D" unique_id=1962478908]
 script = ExtResource("1_gf87o")
 
+[node name="Svidanie3" type="AudioStreamPlayer" parent="." unique_id=853399912]
+stream = ExtResource("6_gf87o")
+
 [node name="ButtonWin" type="Button" parent="." unique_id=549514287]
 offset_left = 349.0
 offset_top = 653.0
@@ -39,8 +42,23 @@ position = Vector2(718, 86)
 
 [node name="SoundPanel" parent="." unique_id=1713060188 instance=ExtResource("7_y65ea")]
 
-[node name="Svidanie3" type="AudioStreamPlayer" parent="SoundPanel" unique_id=853399912]
-stream = ExtResource("6_gf87o")
+[node name="TimonDebug" type="Node" parent="." unique_id=1174879570]
+
+[node name="ButtonDebug2" type="Button" parent="TimonDebug" unique_id=238035326]
+offset_left = 23.0
+offset_top = 101.0
+offset_right = 91.0
+offset_bottom = 132.0
+text = "Debug2"
+
+[node name="ButtonDebug1" type="Button" parent="." unique_id=2140927788]
+offset_left = 22.0
+offset_top = 65.0
+offset_right = 90.0
+offset_bottom = 96.0
+text = "Debug1"
 
 [connection signal="pressed" from="ButtonWin" to="." method="_on_button_win_pressed"]
 [connection signal="pressed" from="ButtonLose" to="." method="_on_button_lose_pressed"]
+[connection signal="pressed" from="TimonDebug/ButtonDebug2" to="." method="_on_button_debug_2_pressed"]
+[connection signal="pressed" from="ButtonDebug1" to="." method="_on_button_debug_1_pressed"]
