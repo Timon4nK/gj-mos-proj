@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dyspvjm11obok"]
+
+[ext_resource type="Texture2D" uid="uid://dtyelul6s80k5" path="res://Backgrounds/Room.png" id="1_kimih"]
+
+[node name="TalkField" type="Node2D" unique_id=361738117]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=567759773]
+position = Vector2(264.681, 266.875)
+scale = Vector2(0.71380234, 0.6949542)
+texture = ExtResource("1_kimih")

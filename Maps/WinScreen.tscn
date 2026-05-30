@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c7vx485l4cfu2"]
+
+[ext_resource type="Script" uid="uid://vvpwyc3gkn34" path="res://Script/WinScreen.cs" id="1_olvua"]
+[ext_resource type="AudioStream" uid="uid://mfs1q375bg74" path="res://Sound/WinSound.mp3" id="2_sukxx"]
+
+[sub_resource type="Gradient" id="Gradient_xsp3t"]
+colors = PackedColorArray(6.166753e-08, 0.12551263, 0.05426752, 1, 1.0227784e-06, 0.37141082, 0.22532827, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_xsp3t"]
+gradient = SubResource("Gradient_xsp3t")
+width = 1388
+
+[node name="WinScreen" type="Node2D" unique_id=1165565317]
+script = ExtResource("1_olvua")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=269064109]
+position = Vector2(642, 361)
+scale = Vector2(1, 721.5)
+texture = SubResource("GradientTexture1D_xsp3t")
+
+[node name="ButtonMenu" type="Button" parent="." unique_id=1171022965]
+offset_left = 481.0
+offset_top = 523.0
+offset_right = 814.0
+offset_bottom = 610.0
+text = "Вернуться в меню
+"
+
+[node name="WinSound" type="AudioStreamPlayer" parent="." unique_id=1902731483]
+stream = ExtResource("2_sukxx")
+
+[connection signal="pressed" from="ButtonMenu" to="." method="_on_button_menu_pressed"]

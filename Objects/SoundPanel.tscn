@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://7au24prhmbj4"]
+
+[ext_resource type="Script" uid="uid://nmgr8i3yu3rv" path="res://Script/SoundPanel.cs" id="1_senva"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_q0ctm"]
+device = -1
+keycode = 49
+unicode = 49
+
+[sub_resource type="InputEventKey" id="InputEventKey_gf87o"]
+device = -1
+keycode = 4194439
+unicode = 49
+
+[sub_resource type="Shortcut" id="Shortcut_senva"]
+events = [SubResource("InputEventKey_q0ctm"), SubResource("InputEventKey_gf87o")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_itv0u"]
+device = -1
+keycode = 50
+unicode = 50
+
+[sub_resource type="InputEventKey" id="InputEventKey_u7p2b"]
+device = -1
+keycode = 4194440
+unicode = 50
+
+[sub_resource type="Shortcut" id="Shortcut_ixy4n"]
+events = [SubResource("InputEventKey_itv0u"), SubResource("InputEventKey_u7p2b")]
+
+[node name="SoundPanel" type="Node2D" unique_id=1713060188]
+script = ExtResource("1_senva")
+
+[node name="ButtonMusicOff" type="Button" parent="." unique_id=1375876760]
+offset_left = 947.0
+offset_top = 8.0
+offset_right = 1275.0
+offset_bottom = 68.0
+shortcut = SubResource("Shortcut_senva")
+text = "Нажмите \"1\" чтобы выключить музыку"
+
+[node name="ButtonSoundsOff" type="Button" parent="." unique_id=1921816943]
+offset_left = 961.0
+offset_top = 77.0
+offset_right = 1275.0
+offset_bottom = 137.0
+disabled = true
+shortcut = SubResource("Shortcut_ixy4n")
+text = "Нажмите \"2\" чтобы выключить звуки"
+
+[connection signal="pressed" from="ButtonMusicOff" to="." method="_on_button_music_off_pressed"]
+[connection signal="pressed" from="ButtonSoundsOff" to="." method="_on_button_sounds_off_pressed"]

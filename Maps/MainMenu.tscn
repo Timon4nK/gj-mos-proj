@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://bprptcbe8gj1s"]
+
+[ext_resource type="Script" uid="uid://cwhaiceurfil3" path="res://MainMenu.cs" id="1_klqna"]
+[ext_resource type="AudioStream" uid="uid://c30ea1h6cvfru" path="res://Sound/Svidanie_1.mp3" id="1_oambv"]
+[ext_resource type="AudioStream" uid="uid://3i0vh7xxh1r3" path="res://Sound/ButtonSound.mp3" id="3_dddt8"]
+[ext_resource type="Texture2D" uid="uid://dtyelul6s80k5" path="res://Backgrounds/Room.png" id="4_63emy"]
+[ext_resource type="PackedScene" uid="uid://7au24prhmbj4" path="res://Objects/SoundPanel.tscn" id="5_6ylxq"]
+
+[sub_resource type="Gradient" id="Gradient_edlrx"]
+colors = PackedColorArray(0.12485214, 0.00021909118, 0.2828976, 1, 0.1965405, 0.15345636, 0.15513769, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kyui6"]
+gradient = SubResource("Gradient_edlrx")
+width = 1388
+
+[sub_resource type="InputEventKey" id="InputEventKey_klqna"]
+device = -1
+keycode = 32
+unicode = 32
+
+[sub_resource type="Shortcut" id="Shortcut_dddt8"]
+events = [SubResource("InputEventKey_klqna")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_dddt8"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_63emy"]
+events = [SubResource("InputEventKey_dddt8")]
+
+[node name="MainMenu" type="Node2D" unique_id=1696150654]
+script = ExtResource("1_klqna")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1448472808]
+position = Vector2(642, 361)
+scale = Vector2(1, 721.5)
+texture = SubResource("GradientTexture1D_kyui6")
+
+[node name="ButtonPlay" type="Button" parent="." unique_id=1028860942]
+offset_left = 468.0
+offset_top = 497.0
+offset_right = 793.0
+offset_bottom = 584.0
+shortcut = SubResource("Shortcut_dddt8")
+text = "Нажмите \"Пробел\" чтобы играть"
+
+[node name="ButtonExit" type="Button" parent="." unique_id=1646796897]
+offset_left = 512.0
+offset_top = 623.0
+offset_right = 753.0
+offset_bottom = 665.0
+shortcut = SubResource("Shortcut_63emy")
+text = "Нажмите \"ESC\" чтобы выйти"
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="." unique_id=510462782]
+stream = ExtResource("3_dddt8")
+
+[node name="Svidanie1" type="AudioStreamPlayer" parent="." unique_id=821996571]
+stream = ExtResource("1_oambv")
+
+[node name="Room" type="Sprite2D" parent="." unique_id=405427850]
+position = Vector2(617.375, 262.875)
+scale = Vector2(0.6318425, 0.5737221)
+texture = ExtResource("4_63emy")
+
+[node name="SoundPanel" parent="." unique_id=1713060188 instance=ExtResource("5_6ylxq")]
+position = Vector2(0, 1)
+
+[connection signal="pressed" from="ButtonPlay" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="ButtonExit" to="." method="_on_button_exit_pressed"]

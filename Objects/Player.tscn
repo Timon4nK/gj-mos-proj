@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://mqkgj5nflsxg"]
+
+[ext_resource type="Script" uid="uid://bhaaqbkok6q4c" path="res://Script/Player.cs" id="1_8r7yd"]
+[ext_resource type="Texture2D" uid="uid://dxla03fhu2qfn" path="res://icon.svg" id="2_n6db0"]
+
+[sub_resource type="Gradient" id="Gradient_8r7yd"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_n6db0"]
+gradient = SubResource("Gradient_8r7yd")
+width = 100
+
+[node name="Player" type="Node2D" unique_id=422390334]
+script = ExtResource("1_8r7yd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=60764730]
+scale = Vector2(1, 91.25001)
+texture = SubResource("GradientTexture1D_n6db0")
+
+[node name="ButtonNorth" type="Button" parent="." unique_id=1468897175]
+offset_left = -51.0
+offset_top = -147.0
+offset_right = 49.0
+offset_bottom = -47.0
+text = "North"
+icon = ExtResource("2_n6db0")
+expand_icon = true
+
+[node name="ButtonSouth" type="Button" parent="." unique_id=778465690]
+offset_left = -51.0
+offset_top = 47.0
+offset_right = 49.0
+offset_bottom = 147.0
+text = "South"
+icon = ExtResource("2_n6db0")
+expand_icon = true
+
+[node name="ButtonWest" type="Button" parent="." unique_id=602614851]
+offset_left = -152.0
+offset_top = -51.0
+offset_right = -52.0
+offset_bottom = 49.0
+text = "West"
+icon = ExtResource("2_n6db0")
+expand_icon = true
+
+[node name="ButtonEast" type="Button" parent="." unique_id=1888031667]
+offset_left = 47.0
+offset_top = -47.0
+offset_right = 147.0
+offset_bottom = 53.0
+text = "East"
+icon = ExtResource("2_n6db0")
+expand_icon = true
+
+[connection signal="pressed" from="ButtonNorth" to="." method="_on_button_north_pressed"]
+[connection signal="pressed" from="ButtonSouth" to="." method="_on_button_south_pressed"]
+[connection signal="pressed" from="ButtonWest" to="." method="_on_button_west_pressed"]
+[connection signal="pressed" from="ButtonEast" to="." method="_on_button_east_pressed"]

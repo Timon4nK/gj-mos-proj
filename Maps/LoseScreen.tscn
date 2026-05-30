@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://lvr5ow0ngor6"]
+
+[ext_resource type="Script" uid="uid://4lsyedenchtr" path="res://Script/LoseScreen.cs" id="1_4itmr"]
+[ext_resource type="AudioStream" uid="uid://4jf2kb10f8g0" path="res://Sound/FailSound.mp3" id="2_ev5d3"]
+
+[sub_resource type="Gradient" id="Gradient_edlrx"]
+colors = PackedColorArray(0.21960784, 0, 0, 1, 0.59607846, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4itmr"]
+gradient = SubResource("Gradient_edlrx")
+width = 1388
+
+[node name="LoseScreen" type="Node2D" unique_id=566808134]
+script = ExtResource("1_4itmr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1512456752]
+position = Vector2(642, 361)
+scale = Vector2(1, 721.5)
+texture = SubResource("GradientTexture1D_4itmr")
+
+[node name="ButtonPlay" type="Button" parent="." unique_id=1379422178]
+offset_left = 234.0
+offset_top = 524.0
+offset_right = 559.0
+offset_bottom = 611.0
+text = "Начать сначала"
+
+[node name="ButtonMenu" type="Button" parent="." unique_id=399287172]
+offset_left = 671.0
+offset_top = 520.0
+offset_right = 996.0
+offset_bottom = 607.0
+text = "Вернуться в меню
+"
+
+[node name="FailSound" type="AudioStreamPlayer" parent="." unique_id=211008150]
+stream = ExtResource("2_ev5d3")
+
+[connection signal="pressed" from="ButtonPlay" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="ButtonMenu" to="." method="_on_button_menu_pressed"]
