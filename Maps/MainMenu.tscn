@@ -57,6 +57,7 @@ stream = ExtResource("3_dddt8")
 
 [node name="Svidanie1" type="AudioStreamPlayer" parent="." unique_id=821996571]
 stream = ExtResource("1_oambv")
+parameters/looping = true
 
 [node name="Room" type="Sprite2D" parent="." unique_id=405427850]
 position = Vector2(617.375, 262.875)

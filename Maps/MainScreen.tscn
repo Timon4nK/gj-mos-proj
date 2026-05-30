@@ -25,6 +25,7 @@ position = Vector2(718, 86)
 
 [node name="Svidanie3" type="AudioStreamPlayer" parent="." unique_id=853399912]
 stream = ExtResource("6_gf87o")
+parameters/looping = true
 
 [node name="SoundPanel" parent="." unique_id=1713060188 instance=ExtResource("7_y65ea")]
 
