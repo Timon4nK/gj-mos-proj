@@ -13,7 +13,7 @@ public partial class MainScreen : Node2D
 	public override void _Ready()
 	{
 
-		Svidanie3 = GetNode<AudioStreamPlayer>("Svidanie3");		
+		Svidanie3 = GetNode<AudioStreamPlayer>("Svidanie3");
 		Svidanie3.Play(0);
 	}
 	
@@ -23,7 +23,7 @@ public partial class MainScreen : Node2D
 	}
 	void _on_button_lose_pressed()
 	{
-		GetTree().ChangeSceneToFile("res://Maps/LoseScreen.tscn");		
+		GetTree().ChangeSceneToFile("res://Maps/LoseScreen.tscn");
 	}
 	
 }

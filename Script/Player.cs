@@ -15,7 +15,7 @@ public partial class Player : Node2D
 	public Button ButtonEast;
 	public Button ButtonSouth;
 	public Button ButtonWest;
-	public const int MOVE_DISTANCE = 100;	
+	public const int MOVE_DISTANCE = 100;
 	
 	public override void _Ready()
 	{

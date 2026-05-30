@@ -11,37 +11,36 @@
 [node name="Node2D" type="Node2D" unique_id=1962478908]
 script = ExtResource("1_gf87o")
 
-[node name="GameField" parent="." unique_id=1937513318 instance=ExtResource("1_a8qp3")]
-position = Vector2(32, 80)
-
-[node name="Node2D" parent="." unique_id=422390334 instance=ExtResource("2_34yy4")]
-position = Vector2(278, 250)
-
-[node name="Sphere" parent="." unique_id=1955929147 instance=ExtResource("3_34yy4")]
-position = Vector2(376, 357)
-
-[node name="TalkField" parent="." unique_id=361738117 instance=ExtResource("5_q0ctm")]
-position = Vector2(718, 86)
-
-[node name="Svidanie3" type="AudioStreamPlayer" parent="." unique_id=853399912]
-stream = ExtResource("6_gf87o")
-parameters/looping = true
-
-[node name="SoundPanel" parent="." unique_id=1713060188 instance=ExtResource("7_y65ea")]
-
-[node name="ButtonWin" type="Button" parent="SoundPanel" unique_id=549514287]
+[node name="ButtonWin" type="Button" parent="." unique_id=549514287]
 offset_left = 349.0
 offset_top = 653.0
 offset_right = 539.0
 offset_bottom = 706.0
 text = "Выиграть"
 
-[node name="ButtonLose" type="Button" parent="SoundPanel" unique_id=1509118405]
+[node name="ButtonLose" type="Button" parent="." unique_id=1509118405]
 offset_left = 703.0
 offset_top = 650.0
 offset_right = 893.0
 offset_bottom = 703.0
 text = "Проиграть"
 
-[connection signal="pressed" from="SoundPanel/ButtonWin" to="." method="_on_button_win_pressed"]
-[connection signal="pressed" from="SoundPanel/ButtonLose" to="." method="_on_button_lose_pressed"]
+[node name="GameField" parent="." unique_id=1937513318 instance=ExtResource("1_a8qp3")]
+position = Vector2(32, 80)
+
+[node name="Player" parent="GameField" unique_id=422390334 instance=ExtResource("2_34yy4")]
+position = Vector2(246, 170)
+
+[node name="Sphere" parent="GameField" unique_id=1955929147 instance=ExtResource("3_34yy4")]
+position = Vector2(344, 277)
+
+[node name="TalkField" parent="." unique_id=361738117 instance=ExtResource("5_q0ctm")]
+position = Vector2(718, 86)
+
+[node name="SoundPanel" parent="." unique_id=1713060188 instance=ExtResource("7_y65ea")]
+
+[node name="Svidanie3" type="AudioStreamPlayer" parent="SoundPanel" unique_id=853399912]
+stream = ExtResource("6_gf87o")
+
+[connection signal="pressed" from="ButtonWin" to="." method="_on_button_win_pressed"]
+[connection signal="pressed" from="ButtonLose" to="." method="_on_button_lose_pressed"]

@@ -4,12 +4,12 @@ using Godot;
 
 // Препроцессор
 
-public enum SelectMode
+/*public enum SelectMode
 {
 	None,
 	Move,
 	Trap
-}
+}*/
 
 /*public enum Direction
 {
@@ -23,7 +23,7 @@ public enum SelectMode
 	NorthEast
 }*/
 
-public partial class OldMain : Node2D
+/*public partial class OldMain : Node2D
 {
 	public const int BOARD_SIZE = 800;
 	public const int MOVE_DISTANCE = BOARD_SIZE / 8;
@@ -252,4 +252,4 @@ public partial class Enemy : Sprite2D
 		PosY = posY;
 		Type = type;
 	}
-}
+}*/
