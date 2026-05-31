@@ -9,14 +9,14 @@ public enum Direction
 	East
 }
 
-public partial class Player : Node2D
+public partial class Player : FieldObject
 {
 	public Button ButtonNorth;
 	public Button ButtonEast;
 	public Button ButtonSouth;
 	public Button ButtonWest;
-	public const int MOVE_DISTANCE = 100;
-	
+	//private static int MOVE_DISTANCE = GameField.MOVE_DISTANCE;
+
 	public override void _Ready()
 	{
 		ButtonNorth  = GetNode<Button>("ButtonNorth");

@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\User\\GodotProjects\\gj-mos-proj\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D1EAF7F4-3EB9-4190-A6B6-FA26C0C6F710}|GJMosProj.csproj|c:\\users\\user\\godotprojects\\gj-mos-proj\\script\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1EAF7F4-3EB9-4190-A6B6-FA26C0C6F710}|GJMosProj.csproj|solutionrelative:script\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D1EAF7F4-3EB9-4190-A6B6-FA26C0C6F710}|GJMosProj.csproj|c:\\users\\user\\godotprojects\\gj-mos-proj\\script\\gamefield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D1EAF7F4-3EB9-4190-A6B6-FA26C0C6F710}|GJMosProj.csproj|solutionrelative:script\\gamefield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1EAF7F4-3EB9-4190-A6B6-FA26C0C6F710}|GJMosProj.csproj|c:\\users\\user\\godotprojects\\gj-mos-proj\\maps\\mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1EAF7F4-3EB9-4190-A6B6-FA26C0C6F710}|GJMosProj.csproj|solutionrelative:maps\\mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D1EAF7F4-3EB9-4190-A6B6-FA26C0C6F710}|GJMosProj.csproj|c:\\users\\user\\godotprojects\\gj-mos-proj\\script\\oldmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D1EAF7F4-3EB9-4190-A6B6-FA26C0C6F710}|GJMosProj.csproj|solutionrelative:script\\oldmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D1EAF7F4-3EB9-4190-A6B6-FA26C0C6F710}|GJMosProj.csproj|c:\\users\\user\\godotprojects\\gj-mos-proj\\script\\soundpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1EAF7F4-3EB9-4190-A6B6-FA26C0C6F710}|GJMosProj.csproj|solutionrelative:script\\soundpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D1EAF7F4-3EB9-4190-A6B6-FA26C0C6F710}|GJMosProj.csproj|c:\\users\\user\\godotprojects\\gj-mos-proj\\script\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1EAF7F4-3EB9-4190-A6B6-FA26C0C6F710}|GJMosProj.csproj|solutionrelative:script\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D1EAF7F4-3EB9-4190-A6B6-FA26C0C6F710}|GJMosProj.csproj|c:\\users\\user\\godotprojects\\gj-mos-proj\\maps\\mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1EAF7F4-3EB9-4190-A6B6-FA26C0C6F710}|GJMosProj.csproj|solutionrelative:maps\\mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D1EAF7F4-3EB9-4190-A6B6-FA26C0C6F710}|GJMosProj.csproj|c:\\users\\user\\godotprojects\\gj-mos-proj\\script\\soundpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1EAF7F4-3EB9-4190-A6B6-FA26C0C6F710}|GJMosProj.csproj|solutionrelative:script\\soundpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D1EAF7F4-3EB9-4190-A6B6-FA26C0C6F710}|GJMosProj.csproj|c:\\users\\user\\godotprojects\\gj-mos-proj\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,6 +45,10 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "OldMain.cs",
@@ -52,60 +56,62 @@
               "RelativeDocumentMoniker": "Script\\OldMain.cs",
               "ToolTip": "C:\\Users\\User\\GodotProjects\\gj-mos-proj\\Script\\OldMain.cs",
               "RelativeToolTip": "Script\\OldMain.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-30T21:53:04.013Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "GameField.cs",
               "DocumentMoniker": "C:\\Users\\User\\GodotProjects\\gj-mos-proj\\Script\\GameField.cs",
               "RelativeDocumentMoniker": "Script\\GameField.cs",
-              "ToolTip": "C:\\Users\\User\\GodotProjects\\gj-mos-proj\\Script\\GameField.cs*",
-              "RelativeToolTip": "Script\\GameField.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\User\\GodotProjects\\gj-mos-proj\\Script\\GameField.cs",
+              "RelativeToolTip": "Script\\GameField.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-30T21:38:56.382Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\User\\GodotProjects\\gj-mos-proj\\Script\\Player.cs",
               "RelativeDocumentMoniker": "Script\\Player.cs",
               "ToolTip": "C:\\Users\\User\\GodotProjects\\gj-mos-proj\\Script\\Player.cs",
               "RelativeToolTip": "Script\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-30T21:26:58.112Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "MainScreen.cs",
               "DocumentMoniker": "C:\\Users\\User\\GodotProjects\\gj-mos-proj\\Maps\\MainScreen.cs",
               "RelativeDocumentMoniker": "Maps\\MainScreen.cs",
               "ToolTip": "C:\\Users\\User\\GodotProjects\\gj-mos-proj\\Maps\\MainScreen.cs",
               "RelativeToolTip": "Maps\\MainScreen.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-30T20:53:22.896Z"
+              "WhenOpened": "2026-05-30T20:53:22.896Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "SoundPanel.cs",
               "DocumentMoniker": "C:\\Users\\User\\GodotProjects\\gj-mos-proj\\Script\\SoundPanel.cs",
               "RelativeDocumentMoniker": "Script\\SoundPanel.cs",
               "ToolTip": "C:\\Users\\User\\GodotProjects\\gj-mos-proj\\Script\\SoundPanel.cs",
               "RelativeToolTip": "Script\\SoundPanel.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAQwBEAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAQwBEAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-30T20:53:05.265Z"
+              "WhenOpened": "2026-05-30T20:53:05.265Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -115,9 +121,10 @@
               "RelativeDocumentMoniker": "MainMenu.cs",
               "ToolTip": "C:\\Users\\User\\GodotProjects\\gj-mos-proj\\MainMenu.cs",
               "RelativeToolTip": "MainMenu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-30T20:32:57.322Z"
+              "WhenOpened": "2026-05-30T20:32:57.322Z",
+              "EditorCaption": ""
             }
           ]
         }

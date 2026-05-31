@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://b2yn3baa7negd"]
 
-[ext_resource type="Texture2D" uid="uid://dxla03fhu2qfn" path="res://icon.svg" id="1_6h47c"]
+[ext_resource type="Texture2D" uid="uid://4fc4ij4cmbr3" path="res://Sprites/12c2da3f-cf44-4d24-b686-9eb9177bd1b6-cover.png" id="1_6h47c"]
 
 [node name="GameField" type="Node2D" unique_id=1937513318]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2041807419]
-position = Vector2(321, 286.00003)
-scale = Vector2(4.9765625, 4.40625)
+position = Vector2(200, 200)
 texture = ExtResource("1_6h47c")

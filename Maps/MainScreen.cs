@@ -3,6 +3,7 @@ using System;
 
 public partial class MainScreen : Node2D
 {
+	public int Score = 0;
 	public AudioStreamPlayer Svidanie3; 
 	
 	//Для теста
@@ -26,11 +27,10 @@ public partial class MainScreen : Node2D
 	}
 	void _on_button_debug_1_pressed()
 	{
-		GD.Print(GameField.Instance.ThemeColor);
+
 	}
 	void _on_button_debug_2_pressed()
 	{
-		GameField.Instance.ThemeColor = "Светлая";
 
 	}
 }

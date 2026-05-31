@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://b2yn3baa7negd" path="res://Objects/GameField.tscn" id="1_a8qp3"]
 [ext_resource type="Script" uid="uid://cu4apv1dv24y3" path="res://Maps/MainScreen.cs" id="1_gf87o"]
-[ext_resource type="PackedScene" uid="uid://mqkgj5nflsxg" path="res://Objects/Player.tscn" id="2_34yy4"]
-[ext_resource type="PackedScene" uid="uid://bjdu78lu8bmug" path="res://Objects/Sphere.tscn" id="3_34yy4"]
+[ext_resource type="Script" uid="uid://bhaaqbkok6q4c" path="res://Script/Player.cs" id="5_itv0u"]
 [ext_resource type="PackedScene" uid="uid://dyspvjm11obok" path="res://Objects/TalkField.tscn" id="5_q0ctm"]
 [ext_resource type="AudioStream" uid="uid://nwcfjeviusp0" path="res://Sound/Svidanie_3.mp3" id="6_gf87o"]
+[ext_resource type="Texture2D" uid="uid://dxla03fhu2qfn" path="res://icon.svg" id="6_u7p2b"]
 [ext_resource type="PackedScene" uid="uid://7au24prhmbj4" path="res://Objects/SoundPanel.tscn" id="7_y65ea"]
 
 [node name="Node2D" type="Node2D" unique_id=1962478908]
@@ -29,13 +29,51 @@ offset_bottom = 703.0
 text = "Проиграть"
 
 [node name="GameField" parent="." unique_id=1937513318 instance=ExtResource("1_a8qp3")]
-position = Vector2(32, 80)
+position = Vector2(156, 152)
 
-[node name="Player" parent="GameField" unique_id=422390334 instance=ExtResource("2_34yy4")]
-position = Vector2(246, 170)
+[node name="Player" type="Sprite2D" parent="GameField" unique_id=2142721112]
+texture = ExtResource("6_u7p2b")
+script = ExtResource("5_itv0u")
 
-[node name="Sphere" parent="GameField" unique_id=1955929147 instance=ExtResource("3_34yy4")]
-position = Vector2(344, 277)
+[node name="ButtonNorth" type="Button" parent="GameField/Player" unique_id=28833878]
+offset_left = -50.0
+offset_top = -150.0
+offset_right = 50.0
+offset_bottom = -50.0
+text = "North"
+icon = ExtResource("6_u7p2b")
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonSouth" type="Button" parent="GameField/Player" unique_id=343141350]
+offset_left = -50.0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 150.0
+text = "South"
+icon = ExtResource("6_u7p2b")
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonWest" type="Button" parent="GameField/Player" unique_id=555075610]
+offset_left = -150.0
+offset_top = -50.0
+offset_right = -50.0
+offset_bottom = 50.0
+text = "West"
+icon = ExtResource("6_u7p2b")
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ButtonEast" type="Button" parent="GameField/Player" unique_id=989385093]
+offset_left = 50.0
+offset_top = -50.0
+offset_right = 150.0
+offset_bottom = 50.0
+text = "East"
+icon = ExtResource("6_u7p2b")
+expand_icon = true
+metadata/_edit_use_anchors_ = true
 
 [node name="TalkField" parent="." unique_id=361738117 instance=ExtResource("5_q0ctm")]
 position = Vector2(718, 86)
@@ -44,6 +82,13 @@ position = Vector2(718, 86)
 
 [node name="TimonDebug" type="Node" parent="." unique_id=1174879570]
 
+[node name="ButtonDebug1" type="Button" parent="TimonDebug" unique_id=2140927788]
+offset_left = 22.0
+offset_top = 65.0
+offset_right = 90.0
+offset_bottom = 96.0
+text = "Debug1"
+
 [node name="ButtonDebug2" type="Button" parent="TimonDebug" unique_id=238035326]
 offset_left = 23.0
 offset_top = 101.0
@@ -51,14 +96,11 @@ offset_right = 91.0
 offset_bottom = 132.0
 text = "Debug2"
 
-[node name="ButtonDebug1" type="Button" parent="." unique_id=2140927788]
-offset_left = 22.0
-offset_top = 65.0
-offset_right = 90.0
-offset_bottom = 96.0
-text = "Debug1"
-
 [connection signal="pressed" from="ButtonWin" to="." method="_on_button_win_pressed"]
 [connection signal="pressed" from="ButtonLose" to="." method="_on_button_lose_pressed"]
+[connection signal="pressed" from="GameField/Player/ButtonNorth" to="GameField/Player" method="_on_button_north_pressed"]
+[connection signal="pressed" from="GameField/Player/ButtonSouth" to="GameField/Player" method="_on_button_south_pressed"]
+[connection signal="pressed" from="GameField/Player/ButtonWest" to="GameField/Player" method="_on_button_west_pressed"]
+[connection signal="pressed" from="GameField/Player/ButtonEast" to="GameField/Player" method="_on_button_east_pressed"]
+[connection signal="pressed" from="TimonDebug/ButtonDebug1" to="." method="_on_button_debug_1_pressed"]
 [connection signal="pressed" from="TimonDebug/ButtonDebug2" to="." method="_on_button_debug_2_pressed"]
-[connection signal="pressed" from="ButtonDebug1" to="." method="_on_button_debug_1_pressed"]
