@@ -1,21 +1,12 @@
 using Godot;
 using System;
 
-public enum Direction
-{
-	North,
-	West,
-	South,
-	East
-}
-
 public partial class Player : FieldObject
 {
 	public Button ButtonNorth;
 	public Button ButtonEast;
 	public Button ButtonSouth;
 	public Button ButtonWest;
-	//private static int MOVE_DISTANCE = GameField.MOVE_DISTANCE;
 
 	public override void _Ready()
 	{
@@ -27,25 +18,8 @@ public partial class Player : FieldObject
 		
 	void directionalButtonHandler(Direction direction)
 	{
-		switch (direction)
-		{
-			case Direction.North:
-				Position =
-				new Vector2(Position.X, Position.Y - MOVE_DISTANCE);
-				break;
-			case Direction.West:
-				Position =
-				new Vector2(Position.X - MOVE_DISTANCE, Position.Y);
-				break;
-			case Direction.South:
-				Position =
-				new Vector2(Position.X, Position.Y + MOVE_DISTANCE);
-				break;
-			case Direction.East:
-				Position =
-				new Vector2(Position.X + MOVE_DISTANCE, Position.Y);
-				break;
-		}
+		MoveOnGrid(direction);
+		// TODO: звуки кнопок
 	}
 
 	void _on_button_north_pressed() { directionalButtonHandler(Direction.North); }
