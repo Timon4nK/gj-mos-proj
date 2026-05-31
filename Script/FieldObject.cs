@@ -3,10 +3,10 @@ using Godot;
 
 public enum Direction
 {
-    North,
-    West,
-    South,
-    East
+	North,
+	West,
+	South,
+	East
 }
 
 public partial class FieldObject : Sprite2D
@@ -17,7 +17,7 @@ public partial class FieldObject : Sprite2D
 	protected FieldObject() { } // Не ешь
 
 
-    public FieldObject(int X, int Y)
+	public FieldObject(int X, int Y)
 	{
 		gridPosX = X;
 		gridPosY = Y;
@@ -30,18 +30,21 @@ public partial class FieldObject : Sprite2D
 
 	private void CheckCollision(Direction direction)
 	{
-        //TODO: Обработка сетки в GameField
-        if (gridPosX < 0 || gridPosX > 4 || gridPosY < 0 || gridPosY > 4)
+		//TODO: Обработка сетки в GameField
+		if (gridPosX < 0 || gridPosX > 4 || gridPosY < 0 || gridPosY > 4)
 		{
 			Score();
 			return;
 		}
 
 		GameField.Instance.Grid[gridPosX, gridPosY].MoveOnGrid(direction);
+		GameField.Instance.Grid[gridPosX, gridPosY] = this;
 
 	}
 	public void MoveOnGrid(Direction direction)
 	{
+		GameField.Instance.Grid[gridPosX, gridPosY] = new FieldObject(gridPosX, gridPosY);
+
 		switch (direction)
 		{
 			case Direction.North:

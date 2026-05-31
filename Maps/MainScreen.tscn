@@ -8,6 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://dxla03fhu2qfn" path="res://icon.svg" id="6_u7p2b"]
 [ext_resource type="PackedScene" uid="uid://7au24prhmbj4" path="res://Objects/SoundPanel.tscn" id="7_y65ea"]
 
+[sub_resource type="InputEventKey" id="InputEventKey_y65ea"]
+device = -1
+keycode = 4194320
+
+[sub_resource type="Shortcut" id="Shortcut_itv0u"]
+events = [SubResource("InputEventKey_y65ea")]
+
 [node name="Node2D" type="Node2D" unique_id=1962478908]
 script = ExtResource("1_gf87o")
 
@@ -32,6 +39,7 @@ text = "Проиграть"
 position = Vector2(156, 152)
 
 [node name="Player" type="Sprite2D" parent="GameField" unique_id=2142721112]
+position = Vector2(200, 200)
 texture = ExtResource("6_u7p2b")
 script = ExtResource("5_itv0u")
 
@@ -40,6 +48,7 @@ offset_left = -50.0
 offset_top = -150.0
 offset_right = 50.0
 offset_bottom = -50.0
+shortcut = SubResource("Shortcut_itv0u")
 text = "North"
 icon = ExtResource("6_u7p2b")
 expand_icon = true

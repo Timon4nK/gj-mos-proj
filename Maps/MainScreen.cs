@@ -27,7 +27,7 @@ public partial class MainScreen : Node2D
 	}
 	void _on_button_debug_1_pressed()
 	{
-
+		GameField._DEBUG_Print();
 	}
 	void _on_button_debug_2_pressed()
 	{

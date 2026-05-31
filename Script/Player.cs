@@ -7,6 +7,18 @@ public partial class Player : FieldObject
 	public Button ButtonEast;
 	public Button ButtonSouth;
 	public Button ButtonWest;
+	protected Player()
+	{
+		gridPosX = 2;
+		gridPosY = 2;
+	}
+	public Player(int X, int Y)
+	{
+		gridPosX = X;
+		gridPosY = Y;
+		Position = new Vector2(gridPosX * MOVE_DISTANCE, gridPosY * MOVE_DISTANCE);
+		Texture = GD.Load<Texture2D>("res://icon.svg");
+	}
 
 	public override void _Ready()
 	{
@@ -20,6 +32,14 @@ public partial class Player : FieldObject
 	{
 		MoveOnGrid(direction);
 		// TODO: звуки кнопок
+		if(gridPosX > 0) ButtonWest.Visible = true;
+		else ButtonWest.Visible = false;
+		if (gridPosY > 0) ButtonNorth.Visible = true;
+		else ButtonNorth.Visible = false;
+		if (gridPosX < 4) ButtonEast.Visible = true;
+		else ButtonEast.Visible = false;
+		if (gridPosY < 4) ButtonSouth.Visible = true;
+		else ButtonSouth.Visible = false;
 	}
 
 	void _on_button_north_pressed() { directionalButtonHandler(Direction.North); }
