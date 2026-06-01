@@ -30,7 +30,6 @@ public partial class FieldObject : Sprite2D
 
 	private void CheckCollision(Direction direction)
 	{
-		//TODO: Обработка сетки в GameField
 		if (gridPosX < 0 || gridPosX > 4 || gridPosY < 0 || gridPosY > 4)
 		{
 			Score();

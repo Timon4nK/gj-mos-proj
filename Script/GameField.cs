@@ -33,7 +33,8 @@ public partial class GameField : Node
 		}
 	}
 
-	public static void GenerateNextLevel()
+
+	public static void GenerateNextLevel(bool hardMode)
 	{
 		Godot.Collections.Array<Node> children = Instance.GetChildren();
 
@@ -55,11 +56,14 @@ public partial class GameField : Node
 		{new FieldObject(0,4), new FieldObject(1,4), new FieldObject(2,4), new FieldObject(3,4), new FieldObject(4,4) }
 		};
 
-		Grid[Player.Instance.gridPosX, Player.Instance.gridPosY] = Player.Instance;
+		Grid[Player.Instance.gridPosY, Player.Instance.gridPosX] = Player.Instance;
 
 		foreach (FieldObject item in Grid)
 		{
-			Instance.AddChild(item);
+            if (item.GetType().Name != "Player")
+            {
+                Instance.AddChild(item);
+            }
 		}
 	}
 }

@@ -11,6 +11,7 @@ public partial class Orb : FieldObject
 		gridPosY = Y;
 		Position = new Vector2(gridPosX * MOVE_DISTANCE, gridPosY * MOVE_DISTANCE);
 		OrbType = orbType;
+		// TODO: Текстуры
 	}
 
     protected override void Score()
@@ -19,7 +20,18 @@ public partial class Orb : FieldObject
 		{
 			case "green":
 				MainScreen.Score += 1;
+				GameField.GenerateNextLevel(false);
 				break;
-		}
+            case "red":
+                MainScreen.Score -= 1;
+                break;
+            case "black":
+                MainScreen.Score -= 2;
+                break;
+            case "pink":
+                MainScreen.Score += 1;
+                GameField.GenerateNextLevel(true);
+                break;
+        }
     }
 }
