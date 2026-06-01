@@ -3,7 +3,7 @@ using System;
 
 public partial class MainScreen : Node2D
 {
-	public int Score = 0;
+	public static int Score = 0;
 	public AudioStreamPlayer Svidanie3; 
 	
 	//Для теста
@@ -31,6 +31,6 @@ public partial class MainScreen : Node2D
 	}
 	void _on_button_debug_2_pressed()
 	{
-
+		GameField.GenerateNextLevel();
 	}
 }

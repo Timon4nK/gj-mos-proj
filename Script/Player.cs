@@ -7,6 +7,9 @@ public partial class Player : FieldObject
 	public Button ButtonEast;
 	public Button ButtonSouth;
 	public Button ButtonWest;
+
+	private static Player _instance;
+	public static Player Instance => _instance ??= new Player();
 	protected Player()
 	{
 		gridPosX = 2;

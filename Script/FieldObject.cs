@@ -14,7 +14,7 @@ public partial class FieldObject : Sprite2D
 	protected int MOVE_DISTANCE = GameField.MOVE_DISTANCE;
 	public int gridPosX { get; set; }
 	public int gridPosY { get; set; }
-	protected FieldObject() { } // Не ешь
+	protected FieldObject() { } // Только для пресетов
 
 
 	public FieldObject(int X, int Y)
@@ -23,9 +23,9 @@ public partial class FieldObject : Sprite2D
 		gridPosY = Y;
 		Position = new Vector2(gridPosX * MOVE_DISTANCE, gridPosY * MOVE_DISTANCE);
 	}
-	private void Score()
+	protected virtual void Score()
 	{
-		//TODO: Скоринг, загрузка новых уровней
+		return;
 	}
 
 	private void CheckCollision(Direction direction)
@@ -37,13 +37,13 @@ public partial class FieldObject : Sprite2D
 			return;
 		}
 
-		GameField.Instance.Grid[gridPosX, gridPosY].MoveOnGrid(direction);
-		GameField.Instance.Grid[gridPosX, gridPosY] = this;
+		GameField.Grid[gridPosX, gridPosY].MoveOnGrid(direction);
+		GameField.Grid[gridPosX, gridPosY] = this;
 
 	}
 	public void MoveOnGrid(Direction direction)
 	{
-		GameField.Instance.Grid[gridPosX, gridPosY] = new FieldObject(gridPosX, gridPosY);
+		GameField.Grid[gridPosX, gridPosY] = new FieldObject(gridPosX, gridPosY);
 
 		switch (direction)
 		{
