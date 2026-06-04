@@ -31,6 +31,6 @@ public partial class MainScreen : Node2D
 	}
 	void _on_button_debug_2_pressed()
 	{
-		GameField.GenerateNextLevel();
+		GameField.GenerateNextLevel(false);
 	}
 }

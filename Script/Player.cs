@@ -8,27 +8,19 @@ public partial class Player : FieldObject
 	public Button ButtonSouth;
 	public Button ButtonWest;
 
-	private static Player _instance;
-	public static Player Instance => _instance ??= new Player();
-	protected Player()
-	{
-		gridPosX = 2;
-		gridPosY = 2;
-	}
-	public Player(int X, int Y)
-	{
-		gridPosX = X;
-		gridPosY = Y;
-		Position = new Vector2(gridPosX * MOVE_DISTANCE, gridPosY * MOVE_DISTANCE);
-		Texture = GD.Load<Texture2D>("res://icon.svg");
-	}
-
+	public static int playerPosX { get; set; }
+	public static int playerPosY { get; set; }
+	
 	public override void _Ready()
 	{
 		ButtonNorth  = GetNode<Button>("ButtonNorth");
 		ButtonEast   = GetNode<Button>("ButtonEast");
 		ButtonSouth  = GetNode<Button>("ButtonSouth");
 		ButtonWest	 = GetNode<Button>("ButtonWest");
+
+		gridPosX = 2; gridPosY = 2;
+		playerPosX = 2; playerPosY = 2;
+		Position = new Vector2(gridPosX * MOVE_DISTANCE, gridPosY * MOVE_DISTANCE);
 	}
 		
 	void directionalButtonHandler(Direction direction)

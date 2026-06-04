@@ -59,7 +59,7 @@ public partial class FieldObject : Sprite2D
 				gridPosX++;
 				break;
 		}
-		CheckCollision(direction);
+		if (GetType().Name != "FieldObject") { CheckCollision(direction); }
 
 		//TODO: Протестировать отрисовку
 		Position = new Vector2(gridPosX * MOVE_DISTANCE, gridPosY * MOVE_DISTANCE);

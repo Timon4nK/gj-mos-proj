@@ -13,7 +13,7 @@ public partial class GameField : Node
 		{
 		{new FieldObject(0,0), new FieldObject(1,0), new FieldObject(2,0), new FieldObject(3,0), new FieldObject(4,0) },
 		{new FieldObject(0,1), new FieldObject(1,1), new FieldObject(2,1), new FieldObject(3,1), new FieldObject(4,1) },
-		{new FieldObject(0,2), new FieldObject(1,2), Player.Instance,      new FieldObject(3,2), new FieldObject(4,2) },
+		{new FieldObject(0,2), new FieldObject(1,2), new FieldObject(2,2), new FieldObject(3,2), new FieldObject(4,2) },
 		{new FieldObject(0,3), new FieldObject(1,3), new FieldObject(2,3), new FieldObject(3,3), new FieldObject(4,3) },
 		{new FieldObject(0,4), new FieldObject(1,4), new FieldObject(2,4), new FieldObject(3,4), new FieldObject(4,4) }
 		};
@@ -36,6 +36,7 @@ public partial class GameField : Node
 
 	public static void GenerateNextLevel(bool hardMode)
 	{
+		GD.Print("_DEBUG_level_updated_start");
 		Godot.Collections.Array<Node> children = Instance.GetChildren();
 
 		foreach (Node child in children)
@@ -50,20 +51,21 @@ public partial class GameField : Node
 		Grid = new FieldObject[,]
 		{
 		{new FieldObject(0,0), new FieldObject(1,0), new FieldObject(2,0), new FieldObject(3,0), new FieldObject(4,0) },
-		{new FieldObject(0,1), new FieldObject(1,1), new FieldObject(2,1), new FieldObject(3,1), new FieldObject(4,1) },
+		{new FieldObject(0,1), new Orb(1,1),         new FieldObject(2,1), new FieldObject(3,1), new FieldObject(4,1) },
 		{new FieldObject(0,2), new FieldObject(1,2), new FieldObject(2,2), new FieldObject(3,2), new FieldObject(4,2) },
 		{new FieldObject(0,3), new FieldObject(1,3), new FieldObject(2,3), new FieldObject(3,3), new FieldObject(4,3) },
 		{new FieldObject(0,4), new FieldObject(1,4), new FieldObject(2,4), new FieldObject(3,4), new FieldObject(4,4) }
 		};
 
-		Grid[Player.Instance.gridPosY, Player.Instance.gridPosX] = Player.Instance;
+		Grid[Player.playerPosY, Player.playerPosX] = new FieldObject(Player.playerPosX, Player.playerPosY);
 
 		foreach (FieldObject item in Grid)
 		{
-            if (item.GetType().Name != "Player")
-            {
-                Instance.AddChild(item);
-            }
+			if (item.GetType().Name != "Player")
+			{
+				Instance.AddChild(item);
+			}
 		}
+		GD.Print("_DEBUG_level_updated_finish");
 	}
 }
